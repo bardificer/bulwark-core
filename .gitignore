@@ -10,3 +10,4 @@ HTML
 dist
 build
 *.spec
+*.zip

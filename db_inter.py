@@ -80,8 +80,14 @@ def db_spreadsheet_format(db): #Formats data for spreadsheet readiness
     cur.execute('SELECT DISTINCT Subnet FROM main_table')
     data = cur.fetchall()
     returndict = {}
-    for subnet in data[0]:
-        cur.execute("SELECT * FROM main_table WHERE Subnet =='" + subnet + "';")
+    for subnet in data:
+        cur.execute("SELECT * FROM main_table WHERE Subnet =='" + subnet[0] + "';")
         returndict[subnet] = cur.fetchall()
     
     return returndict
+
+def db_valid(db): #Validates db existence
+    con = sqlite3.connect(db.filename+'.db')
+    cur = con.cursor()
+    cur.execute('SELECT * FROM main_table')
+    print(cur.fetchall())

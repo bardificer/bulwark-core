@@ -19,9 +19,9 @@ def excel_dump(db,filename): #excel spreadsheet dump
         excel_set_format(sheet,nets[0],sets[0])
     elif len(nets) > 1:
         for each in nets:
-            tempsheet = doc.create_sheet(each)
-            tempsheet.title = each
-            excel_set_format(tempsheet,each,net_src[each])
+            tempsheet = doc.create_sheet(each[0])
+            tempsheet.title = each[0]
+            excel_set_format(tempsheet,each[0],net_src[each])
 
         doc.remove_sheet(sheet)
     
@@ -36,7 +36,6 @@ def excel_set_format(sheet,net,single): #formats a subnet for the single sheet
     sheet['C1'] = "Open Ports"
 
     count = 0
-    print(single)
     while count < len(single):
         sheet['A'+str(count+2)] = single[count][0]
         sheet['B'+str(count+2)] = single[count][1]
