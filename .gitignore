@@ -1,0 +1,9 @@
+.autogit
+gitPAT
+.vscode
+__pycache__
+.gitignore
+HTML
+*.xlsx
+*.db
+*.xml
