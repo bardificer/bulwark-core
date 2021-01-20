@@ -22,4 +22,4 @@ Either there will be the portable .exe in releases, or you can download the sour
 
 ##### Example
 
-![] (Readme_Resources/example.gif)
+![Example] (Readme_Resources/example.gif)
