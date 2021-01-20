@@ -7,3 +7,6 @@ HTML
 *.xlsx
 *.db
 *.xml
+dist
+build
+*.spec
