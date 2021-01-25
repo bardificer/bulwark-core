@@ -16,6 +16,10 @@ Essentially, you take nmap scans and output them as xml files. On startup, there
 
 Either there will be the portable .exe in releases, or you can download the source code and run it there. Make sure to "pip install -r requirements.txt" before you run it.
 
+##### IMPORTANT
+
+Currently, Windows Defender recognizes the binary inside my packaging library as malware code. It's typically used for packaging malware, but it's just a python packaging library (pyinstaller). I'm working on a fix for this, but as you can read in the releases section, please just clone the current version or use the source code. It's much easier and doesn't offend antiviruses.
+
 ##### Example
 
 ![Example GIF](demo/example.gif)
